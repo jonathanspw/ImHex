@@ -393,3 +393,5 @@ To develop plugins for ImHex, use one of the following two templates projects to
 - Thanks to btzy for [nativefiledialog-extended](https://github.com/btzy/nativefiledialog-extended)
 - Thanks to danyspin97 for [xdgpp](https://sr.ht/~danyspin97/xdgpp)
 - Thanks to all other groups and organizations whose libraries are used in ImHex
+
+trigger-ci
