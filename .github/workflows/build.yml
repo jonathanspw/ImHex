@@ -665,7 +665,9 @@ jobs:
 
     container:
       image: "fedora:latest"
-      options: --privileged
+      options: |
+        --privileged --cap-add NET_ADMIN --cap-add SYS_ADMIN --security-opt seccomp=unconfined --security-opt apparmor:unconfined
+      
 
     steps:
       - name: ⬇️ Install git-core
