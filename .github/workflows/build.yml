@@ -667,9 +667,11 @@ jobs:
       image: "fedora:latest"
       options: |
         --privileged --cap-add NET_ADMIN --cap-add SYS_ADMIN --security-opt seccomp=unconfined --security-opt apparmor:unconfined
-      
 
     steps:
+      - name: 🛡️ Get rid of AppArmor
+        run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
+
       - name: ⬇️ Install git-core
         run: dnf install --disablerepo="*" --enablerepo="fedora" git-core -y
 
