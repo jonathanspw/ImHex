@@ -669,9 +669,6 @@ jobs:
         --privileged --cap-add NET_ADMIN --cap-add SYS_ADMIN --security-opt seccomp=unconfined --security-opt apparmor:unconfined
 
     steps:
-      - name: 🛡️ Get rid of AppArmor
-        run: echo 0 > /proc/sys/kernel/apparmor_restrict_unprivileged_userns
-
       - name: ⬇️ Install git-core and EPEL repo
         run: dnf install git-core epel-release -y
 
