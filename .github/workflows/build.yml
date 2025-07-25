@@ -953,7 +953,16 @@ jobs:
           - name: Fedora
             release_num: 41
             mock_config: fedora-41
-          - name: RHEL-AlmaLinux
+          - name: AlmaLinux Kitten (CentOS Stream)
+            release_num: 10
+            mock_config: "alma-kitten+epel-10"
+          - name: AlmaLinux (RHEL)
+            release_num: 10
+            mock_config: "alma+epel-10"
+          - name: CentOS Stream
+            release_num: 9
+            mock_config: "centos-stream+epel-9"
+          - name: AlmaLinux (RHEL)
             release_num: 9
             mock_config: "alma+epel-9"
 
